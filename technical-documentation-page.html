@@ -11,8 +11,6 @@
 </head>
 
 <body>
-
-</body>
 	
 	<header>
 
@@ -24,44 +22,168 @@
 
 		<fieldset>
 			<ol>
-				<li><a href="">History</a></li>
+				<li><a href="">Introduction</a></li>
 				<ol>
+					<li><a href="">History</a>
 					<li><a href="">Philosophy</a></li>
+					<li><a href="">Standardization</a></li>
+					<li><a href="">HTML vs. Markdown</a></li>
+					<li><a href="">Implementations</a></li>
 				</ol>
-				<li><a href="">Standardization</a></li>
-				<li><a href="">HTML vs. Markdown</a></li>
-				<ol>
-					<li><a href="">Escaping special characters</a></li>
-				</ol>
-				<li><a href="">Implementations</a></li>
 				<li><a href="">Syntax</a></li>
 				<ol>
-					<li><a href="">Block Elements</a></li>
-					<ol>
-						<li><a href="">Paragraphs</a></li>
-						<li><a href="">Headers</a></li>
-						<li><a href="">Lists</a></li>
-						<li><a href="">Blockquotes</a></li>
-						<li><a href="">Line Breaks</a></li>
-						<li><a href="">Horizontal Rules</a></li>
-					</ol>
-					<li><a href="">Span Elements</a></li>
-					<ol>
-						<li><a href="">Links</a></li>
-						<li><a href="">Emphasis</a></li>
-						<li><a href="">Code</a></li>
-						<li><a href="">Images</a></li>
-					</ol>
-					<li><a href="">Various</a></li>
-					<ol>
-						<li><a href="">Automatic Links</a></li>
-						<li><a href="">Blackslash</a></li>
-					</ol>
+					<li><a href="">Block Elements</a>
+						<ul>
+							<li><a href="">Paragraphs</a></li>
+							<li><a href="">Headers</a></li>
+							<li><a href="">Lists</a></li>
+							<li><a href="">Blockquotes</a></li>
+							<li><a href="">Line Breaks</a></li>
+							<li><a href="">Horizontal Rules</a></li>
+						</ul>
+					</li>
+					<li><a href="">Span Elements</a>
+						<ul>
+							<li><a href="">Links</a></li>
+							<li><a href="">Emphasis</a></li>
+							<li><a href="">Code</a></li>
+							<li><a href="">Images</a></li>
+						</ul>
+					</li>
+					<li><a href="">Various</a>
+						<ul>
+							<li><a href="">Automatic Links</a></li>
+							<li><a href="">Blackslash</a></li>
+						</ul>
+					</li>
+					<li><a href="">Extended syntax</a></li>
 				</ol>
 			</ol>
 
 		</fieldset>
 
 	</header>
+
+	<main id="main-doc">
+
+		<article>
+
+			<div>
+
+			<section class="main-section">
+				<h2>Introduction</h2>
+
+				<dl>
+				<dt><h3>Markdown is</h3></dt>
+					<dd>A plain text formatting syntax</dd>
+					<dd>A software tool, written in Perl, that converts the plain text formatting to HTML.</dd>
+				</dt>
+
+				<dt><h3>Design goal</h3></dt>
+					<dd>
+					Its key design goal is readability. Markdown’s formatting syntax is make to be as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions.
+					</dd>
+
+				<dt><h3>Inpiration</h3></dt>
+					<dd>Markdown’s syntax has been influenced by several existing text-to-HTML filters, the single biggest source of inspiration for Markdown’s syntax is the format of plain text email.</dd>
+
+				</dl>
+			</section>
+
+			<section class="main-section">
+				<h2>History</h2>
+
+				<p>John Gruber created the Markdown language in 2004 in collaboration with Aaron Swartz on the syntax with the goal of enabling people to write using an easy-to-read and easy-to-write plain text format, optionally convert it to structurally valid XHTML (or HTML). Gruber wrote a Perl script, Markdown.pl, which converts marked-up text input to valid, well-formed XHTML or HTML and replaces angle brackets '<' '>' and ampersands '&' with their corresponding character entity references.</p>
+				<p>Markdown has since been re-implemented in a variety of others programming languages. It is distributed under a BSD-style license and is included with, or available as a plugin for, several content-management systems. Some sites use variants of Markdown to facilitate discussion between users.</p>
+
+			</section>
+
+			<section>
+				<h2>Philosophy</h2>
+
+				<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible. Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions.</p>
+				<p>Markdown’s syntax is comprised entirely of punctuation characters, which punctuation characters have been carefully chosen so as to look like what they mean.</p>
+			</section>
+
+			<section class="main-section">
+				<h2>Standardization</h2>
+
+				<p>Markdown has been characterised by an informal specification and a reference implementation for conversion to HTML. Over time, many Markdown implementations have appeared. People developed these mostly driven by the need for additional features on top of the base syntax—such as tables, footnotes, definition lists (technically HTML description lists), and Markdown inside HTML blocks. The behavior of some of these diverges from the reference implementation. At the same time, a number of ambiguities in the informal specification have attracted attention. These issues spurred an effort by some developers of Markdown parsers for standardisation.</p>
+
+				<p>Gruber has argued that complete standardization would be mistaken: <strong>"Different sites (and people) have different needs. No one syntax would make all happy."</strong></p>
+			</section>
+
+			<section class="main-section">
+				<h2>HTML vs. Markdown</h2>
+
+				<p>Markdown’s syntax is intended for one purpose: to be used as a format for writing for the web.</p>
+				<p>Markdown is not a replacement for HTML, or even close to it. Its syntax is very small, corresponding only to a very small subset of HTML tags. The idea is not to create a syntax that makes it easier to insert HTML tags. In my opinion, HTML tags are already easy to insert. The idea for Markdown is to make it easy to read, write, and edit prose. HTML is a publishing format; Markdown is a writing format. Thus, Markdown’s formatting syntax only addresses issues that can be conveyed in plain text.</p>
+				<p>For any markup that is not covered by Markdown’s syntax, you simply use HTML itself. There’s no need to preface it or delimit it to indicate that you’re switching from Markdown to HTML; you just use the tags.</p>
+				
+			</section>
+
+			<section>
+				<h2>Implementation</h2>
+
+				<p>Implementations of Markdown are available for over a dozen programming languages; in addition, many platforms and frameworks support Markdown. Markdown plugins exist for every major blogging platform.</p>
+				<p>While Markdown is a minimal markup language and is read and edited with a normal text editor, there are specially designed editors that preview the files with styles, which are available for all major platforms. Many general purpose text and code editors have syntax highlighting plugins for Markdown built into them or available as optional download. Editors may feature a side-by-side preview window or render the code directly in a WYSIWYG fashion.</p>
+
+			</section>
+
+			</div>
+
+			<div>
+				<h1>Syntax</h1>
+
+				<div>
+					<h2>Block elements</h2>
+
+					<section>
+						<h2>Paragraphs</h2>
+						<p>A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines.</p>
+						<p>It is done by simply writing the paragraph, without any type of label or punctuation mark. </p>
+
+						<code>This is paragraph. Aliquam quasi unde aliquid dicta deleniti nihil nemo. Nam consequuntur quis dolorem odio laudantium sequi. Ab dolor ut temporibus ducimus velit et. Recusandae officia dolorem et nostrum velit repudiandae et enim. Excepturi neque velit non.</code>
+
+					</section>
+
+					<section>
+						<h2>Headers</h2>
+						<p>Markdown supports two styles of headers, Setext and atx.</p>
+						<p><strong>Setext-style headers</strong> are “underlined” using equal signs (for first-level headers) and dashes (for second-level headers). Any number of underlining =’s or -’s will work.</p>
+						<code>This is an H1<br>=============<br><br>This is an H2<br>-------------</code>
+						<p><strong>Atx-style headers</strong> use 1-6 hash characters at the start of the line, corresponding to header levels 1-6. </p>
+						<pre><code># h1<br>## h2<br>### h3<br>#### h4<br>##### h5<br>###### h6</code></pre>
+					</section>
+
+					<section>
+						<h2>Lists</h2>
+						<p>Ordered list use numbers followed by periods:</p>
+						<code>1. First item<br>2. Second item<br>3. Third item</code>
+						<p>Unordered list use asterisks, pluses, and hyphens:</p>
+						<pre><code>* First item<br>* Second item<br>* Third item</code></pre>
+						<pre><code>+ First item<br>+ Second item<br>+ Third item</code></pre>
+						<pre><code>- First item<br>- Second item<br>- Third item</code></pre>
+
+					</section>
+
+					<section>
+						<h2>Code</h2>
+						<p>To denote a word or phrase as code, enclose it in tick marks (`).</p>
+						<p>This is one word with `code`.</p>
+						<p>If the word or phrase you want to denote as code includes one or more tick marks, you can escape it by enclosing the word or phrase in double tick marks (``).</p>
+						<p>``Use `code` in your Markdown file.``</p>
+					</section>
+
+
+				</div>
+
+			</div>
+
+		</article>
+
+	</main>
+
+</body>
 
 </html>
