@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -7,6 +8,8 @@
 	<meta name="viewport" content="width=device-widtf, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+	<link rel="stylesheet" type="text/css" href="style.css">
+
 	<title>Markdown</title>
 </head>
 
@@ -14,76 +17,82 @@
 	
 	<header>
 
-		<nav>
-			<a href=""><h1>Markdown</h1></a>
-		</nav>
+		<nav class="content-wrap" id="navbar">
+			<header><h1>Markdown</h1></header>
+		
 
-		<fieldset>
+		<fieldset class="content-wrap">
 			<ol>
-				<li><a href="">Introduction</a></li>
-				<li><a href="">History</a>
-				<li><a href="">Philosophy</a></li>
-				<li><a href="">Standardization</a></li>
-				<li><a href="">HTML vs. Markdown</a></li>
-				<li><a href="">Implementations</a></li>
-				<li><a href="">Syntax</a></li>
+				<li><a class="nav-link" href="#Introduction">Introduction</a></li>
+				<li><a class="nav-link" href="#History">History</a></li>
+				<li><a class="nav-link" href="#Philosophy">Philosophy</a></li>
+				<li><a class="nav-link" href="#Standardization">Standardization</a></li>
+				<li><a class="nav-link" href="#HTML_vs._Markdown">HTML vs. Markdown</a></li>
+				<li><a class="nav-link" href="#Implementation">Implementation</a></li>
+				<li><a class="nav-link" href="#Syntax">Syntax</a></li>
 				<ol>
-					<li><a href="">Block Elements</a>
+					<li><a class="nav-link" href="#Block_elements">Block Elements</a>
 						<ul>
-							<li><a href="">Paragraphs and Line Breaks</a></li>
-							<li><a href="">Headers</a></li>
-							<li><a href="">Lists</a></li>
-							<li><a href="">Blockquotes</a></li>
-							<li><a href="">Horizontal Rules</a></li>
+							<li><a href="#Paragraphs">Paragraphs</a></li>
+							<li><a href="#Line_break">Line Break</a></li>
+							<li><a href="#Headers">Headers</a></li>
+							<li><a href="#Lists">Lists</a></li>
+							<li><a href="#Blockquotes">Blockquotes</a></li>
+							<li><a href="#Horizontal_rules">Horizontal Rules</a></li>
 						</ul>
 					</li>
-					<li><a href="">Span Elements</a>
+					<li><a class="nav-link" href="#Span_elements">Span Elements</a>
 						<ul>
-							<li><a href="">Links</a></li>
-							<li><a href="">Emphasis</a></li>
-							<li><a href="">Code</a></li>
-							<li><a href="">Images</a></li>
+							<li><a href="#Links">Links</a></li>
+							<li><a href="#Emphasis">Emphasis</a></li>
+							<li><a href="#Code">Code</a></li>
+							<li><a href="#Images">Images</a></li>
 						</ul>
 					</li>
-					<li><a href="">Blackslash</a></li>
-					<li><a href="">Extended syntax</a>
+					<li><a class="nav-link" href="#Backslash_escapes">Backslash escapes</a></li>
+					<li><a class="nav-link" href="#Extended_syntax">Extended syntax</a>
 						<ul>
-							<li><a href="">Fenced code blocks</a></li>
-							
+							<li><a href="#Tables">Tables</a></li>
+							<li><a href="#Fenced_code_blocks">Fenced code blocks</a></li>
+							<li><a href="#Footnotes">Footnotes</a></li>
+							<li><a href="#Heading IDs">Heading IDs</a></li>
+							<li><a href="#Definition_lists">Definition lists</a></li>
+							<li><a href="Strikethrough">Strikethrough</a></li>
+							<li><a href="Task_lists">Task lists</a></li>
 						</ul>
 					</li>
 				</ol>
 			</ol>
 
 		</fieldset>
-
+		</nav>
 	</header>
 
 	<main id="main-doc">
 
 		<article>
 
-			<section class="main-section">
+			<section class="main-section content-wrap" id="Introduction">
 				 <header><h2>Introduction</h2></header>
 
-				<dl>
-				<dt><h3>Markdown is</h3></dt>
-					<dd>A plain text formatting syntax</dd>
-					<dd>A software tool, written in Perl, that converts the plain text formatting to HTML.</dd>
+				<ul>
+				<li><h3>Markdown is</h3></li>
+					<p>A plain text formatting syntax</p>
+					<p>A software tool, written in Perl, that converts the plain text formatting to HTML.</p>
 				</dt>
 
-				<dt><h3>Design goal</h3></dt>
-					<dd>
+				<li><h3>Design goal</h3></li>
+					<p>
 					Its key design goal is readability. Markdown’s formatting syntax is make to be as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions.
-					</dd>
+					</p>
 
-				<dt><h3>Inpiration</h3></dt>
-					<dd>Markdown’s syntax has been influenced by several existing text-to-HTML filters, the single biggest source of inspiration for Markdown’s syntax is the format of plain text email.</dd>
+				<li><h3>Inpiration</h3></li>
+					<p>Markdown’s syntax has been influenced by several existing text-to-HTML filters, the single biggest source of inspiration for Markdown’s syntax is the format of plain text email.</p>
 
-				</dl>
+				</ul>
 			</section>
 
-			<section class="main-section">
+			<section class="main-section content-wrap" id="History">
 				 <header><h2>History</h2></header>
 
 				<p>John Gruber created the Markdown language in 2004 in collaboration with Aaron Swartz on the syntax with the goal of enabling people to write using an easy-to-read and easy-to-write plain text format, optionally convert it to structurally valid XHTML (or HTML). Gruber wrote a Perl script, Markdown.pl, which converts marked-up text input to valid, well-formed XHTML or HTML and replaces angle brackets '<' '>' and ampersands '&' with their corresponding character entity references.</p>
@@ -91,14 +100,14 @@
 
 			</section>
 
-			<section class="main-section">
+			<section class="main-section content-wrap" id="Philosophy">
 				 <header><h2>Philosophy</h2></header>
 
 				<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible. Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions.</p>
 				<p>Markdown’s syntax is comprised entirely of punctuation characters, which punctuation characters have been carefully chosen so as to look like what they mean.</p>
 			</section>
 
-			<section class="main-section">
+			<section class="main-section content-wrap" id="Standardization">
 				 <header><h2>Standardization</h2></header>
 
 				<p>Markdown has been characterised by an informal specification and a reference implementation for conversion to HTML. Over time, many Markdown implementations have appeared. People developed these mostly driven by the need for additional features on top of the base syntax—such as tables, footnotes, definition lists (technically HTML description lists), and Markdown inside HTML blocks. The behavior of some of these diverges from the reference implementation. At the same time, a number of ambiguities in the informal specification have attracted attention. These issues spurred an effort by some developers of Markdown parsers for standardisation.</p>
@@ -106,7 +115,7 @@
 				<p>Gruber has argued that complete standardization would be mistaken: <strong>"Different sites (and people) have different needs. No one syntax would make all happy."</strong></p>
 			</section>
 
-			<section class="main-section">
+			<section class="main-section content-wrap" id="HTML_vs._Markdown">
 				 <header><h2>HTML vs. Markdown</h2></header>
 
 				<p>Markdown’s syntax is intended for one purpose: to be used as a format for writing for the web.</p>
@@ -115,129 +124,151 @@
 				
 			</section>
 
-			<section class="main-section">
-				<h2>Implementation</h2>
+			<section class="main-section content-wrap" id="Implementation">
+				<header><h2>Implementation</h2></header>
 
 				<p>Implementations of Markdown are available for over a dozen programming languages; in addition, many platforms and frameworks support Markdown. Markdown plugins exist for every major blogging platform.</p>
 				<p>While Markdown is a minimal markup language and is read and edited with a normal text editor, there are specially designed editors that preview the files with styles, which are available for all major platforms. Many general purpose text and code editors have syntax highlighting plugins for Markdown built into them or available as optional download. Editors may feature a side-by-side preview window or render the code directly in a WYSIWYG fashion.</p>
 
 			</section>
 
-			<section>
-				<h1>Syntax</h1>
+			<section class="main-section content-wrap" id="Syntax">
+				<header "><h2>Syntax</h2></header>
 
-				<section  class="main-section">
-					<h2>Block elements</h2>
+				<section class="main-section" id="Block_elements">
+					<header><h2>Block elements</h2></header>
 
-					<section>
-						<h2>Paragraphs</h2>
+					<section class="content-wrap" id="Paragraphs">
+						<h3>Paragraphs</h3>
 						<p>A paragraph is simply one or more consecutive lines of text, separated by one or more blank lines.</p>
-						<p>It is done by simply writing the paragraph, without any type of label or punctuation mark. </p>
+						<p>It is done by simply writing the paragraph, without any type of label or punctuation mark. </p></section>
 
-						<code>This is paragraph. Aliquam quasi unde aliquid dicta deleniti nihil nemo. Nam consequuntur quis dolorem odio laudantium sequi. Ab dolor ut temporibus ducimus velit et. Recusandae officia dolorem et nostrum velit repudiandae et enim. Excepturi neque velit non.</code>
+						<section class="content-wrap code"><pre><code>	This is paragraph. Aliquam quasi unde aliquid dicta deleniti nihil nemo. Nam consequuntur quis dolorem odio laudantium sequi. Ab dolor ut temporibus ducimus velit et. Recusandae officia dolorem et nostrum velit repudiandae et enim. Excepturi neque velit non.</code></pre></section>
 
-						<h2>Line break</h2>
-						<p>When you do want to insert a &lt;br /> break tag using Markdown, you end a line with two or more spaces, then type return. This takes a tad more effort to create a &lt;br />, but a simplistic “every line break is a &lt;br />” rule wouldn’t work for Markdown. </p>
-
+						
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><p>This is paragraph. Aliquam quasi unde aliquid dicta deleniti nihil nemo. Nam consequuntur quis dolorem odio laudantium sequi. Ab dolor ut temporibus ducimus velit et. Recusandae officia dolorem et nostrum velit repudiandae et enim. Excepturi neque velit non.</p></div>
+						</section>
+					
+					<section class="content-wrap" id="Line_break">
+						<h3>Line break</h3>
+						<p>When you do want to insert a &lt;br /> break tag using Markdown, you end a line with two or more spaces, then type return. This takes a tad more effort to create a &lt;br />, but a simplistic “every line break is a &lt;br />” rule wouldn’t work for Markdown. </p></section>
+						<section class="content-wrap normal"><pre><code>	This is the first line.<br>	And this is the second line.</code></pre></section>
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><p>This is the first line.<br>And this is the second line.</p></div>
 					</section>
+					
 
-					<section>
-						<h2>Headers</h2>
+					<section class="content-wrap" id="Headers">
+						<h3>Headers</h3>
 						<p>Markdown supports two styles of headers, Setext and atx.</p>
-						<p><strong>Setext-style headers</strong> are “underlined” using equal signs (for first-level headers) and dashes (for second-level headers).</p>
-						<code>This is an H1<br>=============<br><br>This is an H2<br>-------------</code>
+						<p><strong>Setext-style headers</strong> are “underlined” using equal signs (for first-level headers) and dashes (for second-level headers).</p></section>
+						<section class="content-wrap normal"><pre><code>	This is an H1<br>	=============<br><br>	This is an H2<br>	-------------</code></pre></section>
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><h1>This is an H1</h1><h2>This is an H2</h2></div>
 						<p>Note: Any number of underlining =’s or -’s will work.</p>
-						<p><strong>Atx-style headers</strong> use 1-6 hash characters at the start of the line, corresponding to header levels 1-6. </p>
-						<pre><code># h1<br>## h2<br>### h3<br>#### h4<br>##### h5<br>###### h6</code></pre>
-						<p>Note: “Close” atx-style headers ( ## h2 ##) is purely cosmetic. It is the number of opening hashes determines the header level.</p>
+						<p><strong>Atx-style headers</strong> use 1-6 hash characters at the start of the line, corresponding to header levels 1-6. </p></section>
+						<section class="content-wrap normal"><pre><code>	# h1<br>	## h2<br>	### h3<br>	#### h4<br>	##### h5<br>	###### h6</code></pre></section>
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><h1>h1</h1><h2>h2</h2><h3>h3</h3><h4>h4</h4><h5>h5</h5><h6>h6</h6></div>
+						<div class="note"><p>Note: “Close” atx-style headers ( ## h2 ##) is purely cosmetic. It is the number of opening hashes determines the header level.</p></div>
 					</section>
 
-					<section>
-						<h2>Lists</h2>
-						<p>Ordered list use numbers followed by periods:</p>
-						<code>1. First item<br>2. Second item<br>3. Third item</code>
-						<p>Note: The actual numbers that are used to mark the list have no effect on the HTML output Markdown produces. The list always will start with the number 1. At some point in the future, Markdown may support starting ordered lists at an arbitrary number.</p>
-						<p>Unordered list use asterisks, pluses, and hyphens:</p>
-						<pre><code>* First item<br>* Second item<br>* Third item</code></pre>
-						<pre><code>+ First item<br>+ Second item<br>+ Third item</code></pre>
-						<pre><code>- First item<br>- Second item<br>- Third item</code></pre>
-
+					<section class="content-wrap" id="Lists">
+						<h3>Lists</h3>
+						<p>Ordered list use numbers followed by periods:</p></section>
+						<section class="content-wrap normal"><pre><code>	1. First item<br>	2. Second item<br>	3. Third item</code></pre></section>
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><ol><li>First item</li><li>Second item</li><li>Third item</li></ol></div>
+						<div class="note"><p>Note: The actual numbers that are used to mark the list have no effect on the HTML output Markdown produces. The list always will start with the number 1. At some point in the future, Markdown may support starting ordered lists at an arbitrary number.</p></div>
+						<p>Unordered list use asterisks, pluses, and hyphens:</p></section>
+						<section class="content-wrap normal"><pre><code>	* First item<br>	* Second item<br>	* Third item</code></pre>
+						<pre><code>	+ First item<br>	+ Second item<br>	+ Third item</code></pre>
+						<pre><code>	- First item<br>	- Second item<br>	- Third item</code></pre></section>
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><ul><li>First item</li><li>Second item</li><li>Third item</li></ul></div>
 					</section>
 
-					<section>
-						<h2>Blockquotes</h2>
+					<section class="content-wrap" id="Blockquotes">
+						<h3>Blockquotes</h3>
 						<p>Markdown uses email-style > characters for blockquoting.</p>
-						<p>It looks best with a > before every line:</p>
-						<pre><code>> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br>> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<br>><br>> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>> id sem consectetuer libero luctus adipiscing.</code></pre>
-						<p>Markdown allows to put the > before the first line of a hard-wrapped paragraph:</p>
-						<pre><code>> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit.<br>Aliquam hendrerit mi posuere lectus.<br>Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<br><br>> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>id sem consectetuer libero luctus adipiscing.</code></pre>
+						<p>It looks best with a > before every line:</p></section>
+						<section class="content-wrap code"><pre><code>	> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>	> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.<br>	> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<br>	><br>	> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>	> id sem consectetuer libero luctus adipiscing.</code></pre></section>
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><blockquote> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<br><br> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.</blockquote></div>
+						<p>Markdown allows to put the > before the first line of a hard-wrapped paragraph:</p></section>
+						<section class="content-wrap code"><pre><code>	> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,<br>	consectetuer adipiscing elit.<br>	Aliquam hendrerit mi posuere lectus.<br>	Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<br><br>	> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse<br>	id sem consectetuer libero luctus adipiscing.</code></pre></section>
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><blockquote>&nbsp; &nbsp; &nbsp;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.<br><br> &nbsp; &nbsp; &nbsp;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.</blockquote></div>
 					</section>
 
-					<section>
-						<h2>Code block</h2>
+					<section class="content-wrap" id="Code_block">
+						<h3>Code block</h3>
 						<p>To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab.</p>
 						<p>This a normal paragraph</p>
 						<pre><code>	This is a code block</code></pre>
-						<p>Note: If you find this inconvenient, try using <a href="">fenced code blocks</a></p>
+						<div class="note"><p>Note: If you find this inconvenient, try using <a href="#Fenced_code_blocks">fenced code blocks</a></p></div>
 					</section>
 
-					<section>
-						<h2>Horizontal rule</h2>
-						<p>To produce a horizontal rule tag (&lt;hr />) by placing three or more hyphens, asterisks, or underscores on a line by themselves. If you wish, you may use spaces between the hyphens or asterisks. Each of the following lines will produce a horizontal rule:</p>
-						<pre><code>* * *<br>***<br>*****<br>- - -<br>-----------------------</code></pre>
+					<section class="content-wrap" id="Horizontal_rules">
+						<h3>Horizontal rules</h3>
+						<p>To produce a horizontal rule tag (&lt;hr />) by placing three or more hyphens, asterisks, or underscores on a line by themselves. If you wish, you may use spaces between the hyphens or asterisks. Each of the following lines will produce a horizontal rule:</p></section>
+						<section class="content-wrap normal"><pre><code>	* * *<br>	***<br>	*****<br>	- - -<br>	-----------------------</code></pre></section>
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><blockquote><hr></blockquote></div>
 
 					</section>
 
 				</section>
 
-				<section class="main-section">
+				<section class="main-section content-wrap" id="Span_elements">
 
-					<h1>Span Elements</h1>
+					<header><h2>Span elements</h2></header>
 
-					<section>
-						<h2>Links</h2>
+					<section class="content-wrap" id="Links">
+						<h3>Links</h3>
 						<p>To create an inline link, use a set of regular parentheses immediately after the link text’s closing square bracket. Inside the parentheses, put the URL where you want the link to point, along with an optional title for the link, surrounded in quotes.</p>
-						<p>To create a link, enclose the link text in brackets (e.g., [Duck Duck Go]) and then follow it immediately with the URL in parentheses (e.g., (https://duckduckgo.com)).</p>
-						<pre><code>My favorite search engine is [Duck Duck Go](https://duckduckgo.com).</code></pre>
-						<p>The rendered output looks like this:</p>
-						<p>My favorite search engine is <a href="">Duck Duck Go</a>.</p>
+						<p>To create a link, enclose the link text in brackets (e.g., [Duck Duck Go]) and then follow it immediately with the URL in parentheses (e.g., (https://duckduckgo.com)).</p></section>
+						<section class="content-wrap code"><pre><code>	My favorite search engine is [Duck Duck Go](https://duckduckgo.com).</code></pre></section>
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><p>My favorite search engine is <a href="">Duck Duck Go</a>.</p></div>
 
 						<h3>Add title</h3>
-						<p>This will appear as a tooltip when the user hovers over the link. To add a title, enclose it in parentheses after the URL.</p>
-						<pre><code>My favorite search engine is [Duck Duck Go](https://duckduckgo.com "The best search engine for privacy").</code></pre>
-						<p>The rendered output looks like this:</p>
-						<p>My favorite search engine is <a href="" title="The best search engine for privacy">Duck Duck Go</a> .</p>
+						<p>This will appear as a tooltip when the user hovers over the link. To add a title, enclose it in parentheses after the URL.</p></section>
+						<section class="content-wrap code"><pre><code>	My favorite search engine is [Duck Duck Go](https://duckduckgo.com "The best for privacy").</code></pre></section>
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><p>My favorite search engine is <a href="" title="The best for privacy">Duck Duck Go</a> .</p></div>
 
 						<h3>Automatic Links</h3>
-						<p>To quickly turn a URL or email address into a link, enclose it in angle brackets.</p>
-						<pre><code>&lt;https://duckduckgo.com><br>&lt;fake@example.com></code></pre>
-						<p>The rendered output looks like this:</p>
-						<p><a href="">https://duckduckgo.com</a><br><a href="">fake@example.com</a></p>
+						<p>To quickly turn a URL or email address into a link, enclose it in angle brackets.</p></section>
+						<section class="content-wrap"><pre><code>	&lt;https://duckduckgo.com><br>	&lt;fake@example.com></code></pre></section>
+						<section class="content-wrap"><p>The rendered output looks like this:</p>
+						<div class="output"><p><a href="https://duckduckgo.com">https://duckduckgo.com</a><br><a href="fake@example.com">fake@example.com</a></p></div></section>
 					</section>
 
-					<section>
-						<h2>Emphasis</h2>
+					<section class="content-wrap" id="Emphasis">
+						<h3>Emphasis</h3>
 						<p>Markdown treats asterisks (*) and underscores (_) as indicators of emphasis. Text wrapped with one * or _ will be wrapped with an HTML &lt;em> tag; double *’s or _’s will be wrapped with an HTML &lt;strong> tag.</p>
-						<pre><code>*single asterisks*<br>_single underscores_<br>**double asterisks**<br>__double underscores__</code></pre>
+						<pre><code>	*single asterisks*<br>	_single underscores_<br>	**double asterisks**<br>	__double underscores__</code></pre>
 						<p>The rendered output looks like this:</p>
-						<p><em>single asterisks</em><br><em>single underscores</em><br><strong>double asterisks</strong><br><strong>double underscores</strong></p>
-						<p>Note: Surrounding an * or _ with spaces, it’ll be treated as a literal asterisk or underscore.</p>
+						<div class="output"><p><em>single asterisks</em><br><em>single underscores</em><br><strong>double asterisks</strong><br><strong>double underscores</strong></p></div>
+						<div class="note"><p>Note: Surrounding an * or _ with spaces, it’ll be treated as a literal asterisk or underscore.</p></div>
 					</section>
 
-					<section>
-						<h2>Code</h2>
+					<section class="content-wrap" id="Code">
+						<h3>Code</h3>
 						<p>To denote a word or phrase as code, enclose it in tick marks (`).</p>
 						<p>This is one word with `code`.</p>
-						<p>If the word or phrase you want to denote as code includes one or more tick marks, you can escape it by enclosing the word or phrase in double tick marks (``).</p>
-						<p>``Use `code` in your Markdown file.``</p>
+						<div class="note"><p>Note: If the word or phrase you want to denote as code includes one or more tick marks, you can escape it by enclosing the word or phrase in double tick marks (``).</p>
+						<p>``Use `code` in your Markdown file.``</p></div>
 					</section>
 
-					<section>
-						<h2>Images</h2>
+					<section class="content-wrap" id="Images">
+						<h3>Images</h3>
 
 						<p>Markdown uses an image syntax that is intended to resemble the syntax for links, allowing for two styles: inline and reference.</p>
 						<p><strong>Inline</strong> image syntax looks like this:</p>
-						<pre><code>![Alt text](/path/to/img.jpg)<br>![Alt text](/path/to/img.jpg "Optional title")</code></pre>
+						<pre><code>	![Alt text](/path/to/img.jpg)<br>	![Alt text](/path/to/img.jpg "Optional title")</code></pre>
 						<p>That is:</p>
 						<ul>
 							<li>An exclamation mark: !;</li>
@@ -246,37 +277,38 @@
 						</ul>
 
 						<p><strong>Reference-style</strong> image syntax looks like this:</p>
-						<pre><code>![Alt text][id]</code></pre>
+						<pre><code>	![Alt text][id]</code></pre>
 						<p>Where “id” is the name of a defined image reference. Image references are defined using syntax identical to link references:</p>
-						<pre><code>[id]: url/to/image  "Optional title attribute"</code></pre>
-						<p>Note: Markdown has no syntax for specifying the dimensions of an image; if this is important regular HTML &lt;img> tags can be use.</p>
+						<pre><code>	[id]: url/to/image  "Optional title attribute"</code></pre>
+						<div class="note"><p>Note: Markdown has no syntax for specifying the dimensions of an image; if this is important regular HTML &lt;img> tags can be use.</p></div>
 					</section>
 
-				</section>
 
-				<section class="main-section">
-					<h2>Backslash escapes</h2>
-					<p>Markdown allows to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown’s formatting syntax, like this:</p>
-					<pre><code>\*literal asterisks\*</code></pre>
-					<p>Markdown provides backslash escapes for the following characters:</p>
-					<pre><code>\   backslash<br>`   backtick<br>*   asterisk<br>_   underscore<br>{}  curly braces<br>[]  square brackets<br>()  parentheses<br>#   hash mark<br>+   plus sign<br>-   minus sign (hyphen)<br>.   dot<br>!   exclamation mark</code></pre>
-				</section>
+					<section class="main-section content-wrap" id="Backslash_escapes">
+						<header><h2>Backslash escapes</h2></header>
+						<p>Markdown allows to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown’s formatting syntax, like this:</p>
+						<pre><code>	\*literal asterisks\*</code></pre>
+						<p>The rendered output looks like this:</p>
+						<div class="output"><p>*literal asterisks*</p></div>
+						<p>Markdown provides backslash escapes for the following characters:</p>
+						<pre><code>	\   backslash<br>	`   backtick<br>	*   asterisk<br>	_   underscore<br>	{}  curly braces<br>	[]  square brackets<br>	()  parentheses<br>	#   hash mark<br>	+   plus sign<br>	-   minus sign (hyphen)<br>	.   dot<br>	!   exclamation mark</code></pre>
+					</section>
 
-				<section class="main-section">
-					<h2>Extended Syntax</h2>
+				<section class="main-section content-wrap" id="Extended_syntax">
+					<header><h2>Extended syntax</h2></header>
 
 					<p>The basic syntax of John Gruber’s original design document added many of the elements needed on a day-to-day basis, but it wasn’t enough for some people. That’s where extended syntax comes in.</p>
 					<p>Several individuals and organizations took it upon themselves to extend the basic syntax by adding additional elements like tables, code blocks, syntax highlighting, URL auto-linking, and footnotes. These elements can be enabled by using a lightweight markup language that builds upon the basic Markdown syntax, or by adding an extension to a compatible Markdown processor.</p>
 
-					<h3>Availability</h3>
+					<h2>Availability</h2>
 					<p>Extended syntax isn’t available in all Markdown applications. You’ll need to check whether or not the lightweight markup language your application is using supports extended syntax. If it doesn’t, it may still be possible to enable extensions in your Markdown processor.</p>
 
-					<section>
-						<h2>Tables</h2>
+					<section class="content-wrap" id="Tables">
+						<h3>Tables</h3>
 						<p>To add a table, use three or more hyphens (---) to create each column’s header, and use pipes (|) to separate each column. You can optionally add pipes on either end of the table.</p>
-						<pre><code>| Syntax      | Description |<br>| ----------- | ----------- |<br>| Header      | Title       |<br>| Paragraph   | Text        |</code></pre>
+						<pre><code>	| Syntax      | Description |<br>	| ----------- | ----------- |<br>	| Header      | Title       |<br>	| Paragraph   | Text        |</code></pre>
 						<p>The rendered output looks like this:</p>
-						<table>
+						<div class="output"><table>
 							<tr>
 								<th>Syntax</th>
 								<th>Description</th>
@@ -289,13 +321,13 @@
 								<td>Paragraph</td>
 								<td>Text</td>
 							</tr>
-						</table>
+						</table></div>
 
 						<h3>Alignment</h3>
 						<p>Align text in the columns to the left, right, or center by adding a colon (:) to the left, right, or on both side of the hyphens within the header row.</p>
-						<pre><code>| Syntax      | Description | Test Text     |<br>| :---        |    :----:   |          ---: |<br>| Header      | Title       | Here's this   |</code></pre>
+						<pre><code>	| Syntax      | Description | Test Text     |<br>	| :---        |    :----:   |          ---: |<br>	| Header      | Title       | Here's this   |</code></pre>
 						<p>The rendered output looks like this:</p>
-						<table>
+						<div class="output"><table>
 							<tr>
 								<th>Syntax</th>
 								<th>Description</th>
@@ -306,69 +338,69 @@
 								<td>Title</td>
 								<td>Here's this</td>
 							</tr>
-						</table>
+						</table></div>
 					</section>
 				
-					<section>
-						<h2>Fenced code blocks</h2>
+					<section class="content-wrap" id="Fenced_code_blocks">
+						<h3>Fenced code blocks</h3>
 						<p>The basic Markdown syntax allows to create code blocks by indenting lines by four spaces or one tab. Depending on your Markdown processor or editor can be use <strong>fenced code blocks</strong>., using three tick marks (```) or three tildes (~~~) on the lines before and after the code block. Fenced code blocks do not need to indent any lines.</p>
-						<pre><code>```<br>{<br>"firstName": "Dan",<br>"lastName": "Smith",<br>"age": 32<br>}<br>```</code></pre>
+						<pre><code>	```<br>	{<br>	"firstName": "Dan",<br>	"lastName": "Smith",<br>	"age": 32<br>	}<br>	```</code></pre>
 						<p>The rendered output looks like this:</p>
-						<p>{<br>  "firstName": "John",<br>  "lastName": "Smith",<br>  "age": 25<br>}</p>
+						<div class="output"><p>{<br>  "firstName": "John",<br>  "lastName": "Smith",<br>  "age": 25<br>}</p></div>
 					</section>
 
-					<section>
-						<h2>Footnotes</h2>
+					<section class="content-wrap" id="Footnotes">
+						<h3>Footnotes</h3>
 						<p>Footnotes allow you to add notes and references without cluttering the body of the document. When you create a footnote, a superscript number with a link appears where you added the footnote reference. Readers can click the link to jump to the content of the footnote at the bottom of the page.</p>
 						<p>To create a footnote reference, add a caret and an identifier inside brackets ([^1]). Identifiers can be numbers or words, but they can’t contain spaces or tabs. Identifiers only correlate the footnote reference with the footnote itself — in the output, footnotes are numbered sequentially.</p>
 						<p>Add the footnote using another caret and number inside brackets with a colon and text ([^1]: My footnote.). You don’t have to put footnotes at the end of the document. You can put them anywhere except inside other elements like lists, block quotes, and tables.</p>
-						<pre><code>Here's a simple footnote,[^1] and here's a longer one.[^bignote]<br>[^1]: This is the first footnote.<br>[^bignote]: Here's one with multiple paragraphs and code.<br>    Indent paragraphs to include them in the footnote.<br>    `{ my code }`<br>    Add as many paragraphs as you like.</code></pre>
+						<pre><code>	Here's a simple footnote,[^1] and here's a longer one.[^bignote]<br>	[^1]: This is the first footnote.<br>	[^bignote]: Here's one with multiple paragraphs and code.<br> 	   Indent paragraphs to include them in the footnote.<br>	    `{ my code }`<br>	    Add as many paragraphs as you like.</code></pre>
 						<p>The rendered output looks like this:</p>
-						<p>Here’s a simple footnote,1 and here’s a longer one.2<hr>1. This is the first footnote. ↩<br>2. Here’s one with multiple paragraphs and code.<br>Indent paragraphs to include them in the footnote.<br>{ my code }<br>Add as many paragraphs as you like. ↩</p>
+						<div class="output"><p>Here’s a simple footnote,1 and here’s a longer one.2<hr>1. This is the first footnote. ↩<br>2. Here’s one with multiple paragraphs and code.<br>Indent paragraphs to include them in the footnote.<br>{ my code }<br>Add as many paragraphs as you like. ↩</p></div>
 					</section>
 
-					<section>
-						<h2>Heading IDs</h2>
+					<section class="content-wrap" id="Heading_IDs">
+						<h3>Heading IDs</h3>
 						<p>Many Markdown processors support custom IDs for headings — some Markdown processors automatically add them. Adding custom IDs allows you to link directly to headings and modify them with CSS. To add a custom heading ID, enclose the custom ID in curly braces on the same line as the heading.</p>
-						<pre><code>### My Great Heading {#custom-id}</code></pre>
+						<pre><code>	### My Great Heading {#custom-id}</code></pre>
 						<p>The HTML looks like this:</p>
 						<p>&lt;h3 id="custom-id">My Great Heading&lt;/h3></p>
 						<p>The rendered output looks like this:</p>
-						<p><a href="">Heading IDs</a></p>
+						<div class="output"><p><a href="">Heading IDs</a></p></div>
 					</section>
 
-					<section>
-						<h2>Definition Lists</h2>
+					<section class="content-wrap" id="Definition_lists">
+						<h3>Definition lists</h3>
 						<p>Some Markdown processors allow you to create definition lists of terms and their corresponding definitions. To create a definition list, type the term on the first line. On the next line, type a colon followed by a space and the definition.</p>
-						<pre><code>First Term<br>: This is the definition of the first term.<br><br>Second Term<br>: This is one definition of the second term.<br>: This is another definition of the second term.</code></pre>
+						<pre><code>	First Term<br>	: This is the definition of the first term.<br><br>	Second Term<br>	: This is one definition of the second term.<br>	: This is another definition of the second term.</code></pre>
 						<p>The rendered output looks like this:</p>
-						<dl>
+						<div class="output"><dl>
 						  <dt><strong>First Term</strong></dt>
 						  <dd>This is the definition of the first term.</dd>
 						  <dt><strong>Second Term</strong></dt>
 						  <dd>This is one definition of the second term. </dd>
 						  <dd>This is another definition of the second term.</dd>
-						</dl>
+						</dl></div>
 					</section>
 
-					<section>
-						<h2>Strikethrough</h2>
+					<section class="content-wrap" id="Strikethrough">
+						<h3>Strikethrough</h3>
 						<p>You can “strikethrough” words by putting a horizontal line through the center of them. The result looks <s>like this</s>. This feature allows you to indicate that certain words are a mistake not meant for inclusion in the document. To strikethrough words, use two tilde symbols (~~) before and after the words.</p>
-						<pre><code>~~The world is flat.~~ We now know that the world is round.</code></pre>
+						<pre><code>	~~The world is flat.~~ We now know that the world is round.</code></pre>
 						<p>The rendered output looks like this:</p>
-						<p><s>The world is flat</s>. We now know that the world is round.</p>
+						<div class="output"><p><s>The world is flat</s>. We now know that the world is round.</p></div>
 					</section>
 
-					<section>
-						<h2>Task Lists</h2>
+					<section class="content-wrap" id="Task_lists">
+						<h3>Task lists</h3>
 						<p>Task lists allow you to create a list of items with checkboxes. In Markdown applications that support task lists, checkboxes will be displayed next to the content. To create a task list, add dashes (-) and brackets with a space ([ ]) in front of task list items. To select a checkbox, add an x in between the brackets ([x]).</p>
-						<pre><code>- [x] Write the press release<br>- [ ] Update the website<br>- [ ] Contact the media</code></pre>
+						<pre><code>	- [x] Write the press release<br>	- [ ] Update the website<br>	- [ ] Contact the media</code></pre>
 						<p>The rendered output looks like this:</p>
-						<img src="">
+						<div class="output"><img src=""></div>
 					</section>
 
 				</section>
-
+				</section>
 			</section>
 
 		</article>

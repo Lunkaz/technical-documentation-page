@@ -1,0 +1,38 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+}
+
+.content-wrap {
+	padding: 15px 15px;
+	margin: 0 auto;
+	overflow: auto;
+	}
+
+.code {
+	margin-left: -50px ;
+	padding-top: 5px;
+}
+.normal{
+	padding-top: 10px;
+}
+.scroll {
+	width: 100%;
+}
+
+@media (min-width: 600px) {
+
+	.content-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 50px;
+    overflow: auto;
+}
+}
