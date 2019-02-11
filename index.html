@@ -316,37 +316,37 @@
 					<section class="content-wrap" id="Tables">
 						<header><h3>Tables</h3><hr></header>
 						<p>To add a table, use three or more hyphens (---) to create each column’s header, and use pipes (|) to separate each column. You can optionally add pipes on either end of the table.</p></section>
-						<section class="normal"><pre><code>	| Syntax      | Description |<br>	| ----------- | ----------- |<br>	| Header      | Title       |<br>	| Paragraph   | Text        |</code></pre></section>
+						<section class="normal"><pre><code>	| Country     | Capital     |<br>	| ----------- | ----------- |<br>	| Albania     | Tirana      |<br>	| Bahrain     | Manama      |</code></pre></section>
 						<section class="content-wrap"><p>The rendered output looks like this:</p>
-						<div class="output"><table>
+						<div><table class="table table-bordered left">
 							<tr>
-								<th>Syntax</th>
-								<th>Description</th>
+								<th>Country</th>
+								<th>Capital</th>
 							</tr>
 							<tr>
-								<td>Header</td>
-								<td>Title</td>
+								<td>Albania</td>
+								<td>Tirana</td>
 							</tr>
 							<tr>
-								<td>Paragraph</td>
-								<td>Text</td>
+								<td>Bahrain</td>
+								<td>Manama</td>
 							</tr>
 						</table></div>
 
 						<h3>Alignment</h3>
 						<p>Align text in the columns to the left, right, or center by adding a colon (:) to the left, right, or on both side of the hyphens within the header row.</p></section>
-						<section class="code-large"><pre><code>	| Syntax      | Description | Test Text     |<br>	| :---        |    :----:   |          ---: |<br>	| Header      | Title       | Here's this   |</code></pre></section>
+						<section class="code-large"><pre><code>	| Country     | Capital     | Continent     |<br>	| :---        |    :----:   |          ---: |<br>	| Albania     | Tirana      | Europe        |</code></pre></section>
 						<section class="content-wrap final-related"><p>The rendered output looks like this:</p>
-						<div class="output"><table>
+						<div><table class="table table-bordered">
 							<tr>
-								<th>Syntax</th>
-								<th>Description</th>
-								<th>Test Text</th>
+								<th style="text-align: left;">Country</th>
+								<th style="text-align: center;">Capital</th>
+								<th style="text-align: right;">Continent</th>
 							</tr>
 							<tr>
-								<td>Header</td>
-								<td>Title</td>
-								<td>Here's this</td>
+								<td style="text-align: left;">Albania</td>
+								<td style="text-align: center;">Tirana</td>
+								<td style="text-align: right;">Europe</td>
 							</tr>
 						</table></div>
 					</section>

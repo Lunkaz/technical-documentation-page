@@ -100,6 +100,43 @@ fieldset {
 	border: 2px solid #5A5A66;
 }
 
+/*----TABLE----*/
+
+table {
+	border-collapse: collapse;
+}
+
+.table-bordered {
+    border: 1px solid #c3c8ce;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+.table th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #c3c8ce;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #c3c8ce;
+}
+
+.table td, .table th {
+    padding: .75rem;
+}
+
+.left {
+	text-align: left;
+}
+
+.table-bordered th {
+    border-bottom-width: 2px;
+}
 
 @media (min-width: 800px) {
 
